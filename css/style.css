@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-size: 2rem;
+    font-family: 'Didact Gothic', Helvetica, Arial, sans-serif; 
+}
+
+p{
+    font-size: 1.2rem;
+    font-family: 'Didact Gothic', Helvetica, Arial, sans-serif; 
+}
+
+body{
+    background-color: fuchsia;
+}
+
+.grid-container{
+    height: 100vh;
+    width: 100vw;
+    background-color: #eeeeee;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 20fr 1fr 5fr 1fr;
+    grid-template-areas:
+        "content content content content content"
+        "name name name name name"
+        "nav nav nav nav nav"
+        "footer footer footer footer footer";
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+    .grid-container{
+        grid-template-rows: 15fr;
+        grid-template-areas:
+            "name name name name name"
+            "content content content content content";
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+/*   *********************  SLIDER  *********************   */
+.cell1{
+    grid-area: content;
+    background-color: #eeeeee;
+    align-self: center;
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+    .cell1{
+        width: 100%;
+    }
+}
+
+.slider{
+    top: 50px;
+    margin: 5% auto 2.5% auto;
+}
+
+/* XtrsLarge and up */
+@media screen and (min-width: 101em) {
+    .slider{
+        width: 35%;
+    }
+}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 100em) {
+    .slider{
+        width: 50%;
+    }
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .slider{
+        width: 70%;
+    }
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+    .slider{
+        display: none;
+    }
+}
+
+
+.slider-for img{
+    width: 100%;
+}
+
+.slider-nav{
+    margin-top: 2%;
+}
+
+
+.pics-small{
+    margin-left: 4px;
+    margin-right: 4px;
+    filter: grayscale(100%);
+    transition: .5s;
+    overflow: hidden;
+}
+
+.pics-small:hover{
+    filter: grayscale(0%);
+    transform: scale(1.025);
+}
+
+
+/*   *********************  SLIDER SMALL *********************   */
+.slider-small{
+    width: 80%;
+    margin: 10% auto 70px auto;
+}
+
+/* Small and up */
+@media screen and (min-width: 39.9375em) {
+    .slider-small{
+        display: none;
+    }
+}
+
+.slides-small{
+    width: 100%;
+    margin-top: .5%;
+    margin-bottom: .5%;
+    filter: grayscale(100);
+    transition: .5s;
+}
+
+.slides-small:hover{
+    filter: grayscale(0);
+    transform: scale(1.025);
+}
+
+/*   *********************  NAME  *********************   */
+.cell2{
+    grid-area: name;
+    background-color: #555555;
+    padding-left: 4%;
+    text-transform: uppercase;
+    color:#1d1d1d;
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+    .cell2{
+        grid-area: none;
+        position: fixed;
+        width: 100%;
+        height: 5%;
+    }
+}
+
+/*   *********************  NAVIGATION  *********************   */
+.cell3{
+    grid-area: nav;
+    background-color: #1d1d1d;
+    padding-left: 4%;
+    padding-top: 1%;
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+    .cell3{
+        display: none;
+    }
+}
+
+.cell3 a{
+    color: #eeeeee;
+    text-transform: uppercase;
+    line-height: 1.75;
+}
+
+.cell3 ul{
+    list-style: none;
+}
+
+/*   *********************  FOOTER  *********************   */
+.cell4{
+    grid-area: footer;
+    background-color: #111111;
+    text-align: right;
+    padding-right: 4%;
+    padding-top: 0.4%;
+    color: #dddddd;
+}
+
+.cell4 p{
+    font-size: 0.9rem;
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+    .cell4{
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        height: 5%;
+    }
+
+    .cell4 p{
+        padding-top: 3.5%;
+        padding-right: 5%;
+    }
+}
+
