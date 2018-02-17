@@ -63,7 +63,7 @@ body{
 
 .slider{
     top: 50px;
-    margin: 5% auto 2.5% auto;
+    margin: 2% auto 2.5% auto;
 }
 
 /* XtrsLarge and up */
@@ -76,14 +76,14 @@ body{
 /* Large only */
 @media screen and (min-width: 64em) and (max-width: 100em) {
     .slider{
-        width: 50%;
+        width: 30%;
     }
 }
 
 /* Medium only */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     .slider{
-        width: 70%;
+        width: 40%;
     }
 }
 
@@ -96,7 +96,7 @@ body{
 
 
 .slider-for img{
-    width: 100%;
+    margin: 0 auto;
 }
 
 .slider-nav{
@@ -152,6 +152,8 @@ body{
     padding-bottom: 1%;
     text-transform: uppercase;
     color:#1d1d1d;
+    letter-spacing: 0.25rem;
+    font-weight: light;
 }
 
 /* XtrsLarge and up */
