@@ -48,7 +48,7 @@ body{
 }
 
 /*   *********************  SLIDER  *********************   */
-.cell1{
+.slider-container{
     grid-area: content;
     background-color: #eeeeee;
     align-self: center;
@@ -56,7 +56,7 @@ body{
 
 /* Small only */
 @media screen and (max-width: 39.9375em) {
-    .cell1{
+    .slider-container{
         width: 100%;
     }
 }
@@ -145,75 +145,146 @@ body{
 }
 
 /*   *********************  NAME  *********************   */
-.cell2{
+.name{
     grid-area: name;
-    background-color: #555555;
+    background-color: #eeeeee;
     padding-left: 4%;
+    padding-bottom: 1%;
     text-transform: uppercase;
     color:#1d1d1d;
 }
 
+/* XtrsLarge and up */
+@media screen and (min-width: 101em) {
+    .name{
+        padding-left: 32.5%;
+    }
+}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 100em) {
+    .name{
+        padding-left: 25%;
+    }
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .name{
+        padding-left: 15%;
+    }
+}
+
 /* Small only */
 @media screen and (max-width: 39.9375em) {
-    .cell2{
+    .name{
+        text-align: center;
+        padding-left: 0%;
+        padding-bottom: 0%;
         grid-area: none;
         position: fixed;
         width: 100%;
-        height: 5%;
+        height: 10%;
     }
 }
 
 /*   *********************  NAVIGATION  *********************   */
-.cell3{
+.navigation{
     grid-area: nav;
     background-color: #1d1d1d;
     padding-left: 4%;
     padding-top: 1%;
 }
 
+/* XtrsLarge and up */
+@media screen and (min-width: 101em) {
+    .navigation{
+        padding-left: 32.5%;
+    }
+}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 100em) {
+    .navigation{
+        padding-left: 25%;
+    }
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .navigation{
+        padding-left: 15%;
+    }
+}
+
+
 /* Small only */
 @media screen and (max-width: 39.9375em) {
-    .cell3{
+    .navigation{
         display: none;
     }
 }
 
-.cell3 a{
+.navigation a{
     color: #eeeeee;
     text-transform: uppercase;
     line-height: 1.75;
 }
 
-.cell3 ul{
+.navigation ul{
     list-style: none;
+    width: 20%;
 }
-
 /*   *********************  FOOTER  *********************   */
-.cell4{
+.footer{
     grid-area: footer;
     background-color: #111111;
     text-align: right;
-    padding-right: 4%;
     padding-top: 0.4%;
     color: #dddddd;
 }
 
-.cell4 p{
+.footer p{
     font-size: 0.9rem;
+}
+
+.footer a{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* XtrsLarge and up */
+@media screen and (min-width: 101em) {
+    .footer{
+        padding-right: 32.5%;
+    }
+}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 100em) {
+    .footer{
+        padding-right: 25%;
+    }
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .footer{
+        padding-right: 15%;
+    }
 }
 
 /* Small only */
 @media screen and (max-width: 39.9375em) {
-    .cell4{
+    .footer{
         position: fixed;
         width: 100%;
         bottom: 0px;
         height: 5%;
     }
 
-    .cell4 p{
+    .footer p{
         padding-top: 3.5%;
-        padding-right: 5%;
+        padding-right: 10%;
     }
 }
-
