@@ -23,7 +23,7 @@ body{
 
 .grid-container{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: #eeeeee;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -42,7 +42,7 @@ body{
         grid-template-areas:
             "name name name name name"
             "content content content content content";
-        width: 100vw;
+        width: 100%;
         height: 100vh;
     }
 }
@@ -179,39 +179,77 @@ body{
 
 /*   *********************  NAME SMALL  *********************   */
 
-.name-small{
+.head-small{
     grid-area: name;
     background-color: #ddd;
-    padding-left: 4%;
     color:#1d1d1d;
     letter-spacing: 0.15rem;
+    padding-left: 0%;
+    padding-top: 8%;
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid #b9b9b9;
 }
 
-.name-small h1{
+.head-small h1{
     font-size: 1.4rem;
-}
-
-/* Small only */
-@media screen and (max-width: 39.9375em) {
-    .name-small{
-        padding-left: 5%;
-        padding-top: 8%;
-        grid-area: none;
-        position: fixed;
-        width: 100%;
-        height: 10%;
-    }
 }
 
 /* Medium and up */
 @media screen and (min-width: 40em){
-    .name-small{
+    .head-small{
         display: none;
     }
 }
 
+.name-small{
+    width: 85%;
+    background-color:#ddd;
+    float: left;
+    padding-left: 5%;
+    height: 100%;
+}
+
+/*   *********************  NAVIGATION SMALL  *********************   */
+
+.nav-small{
+    clear: both;
+    text-decoration: none;
+    text-align: center;
+    line-height: 5rem;
+    background: #ddd;
+    width: 100%;
+    display: none;
+}
+
+.nav-small a{
+    color: #1d1d1d;
+    border-bottom: 1px solid #b9b9b9;
+    display: block;
+}
+
+label{
+    display: block;
+    width: 5%;
+    padding-right: 5%;
+    font-size: 30px;
+    float: right;
+    text-align: right;
+    cursor: pointer;
+}
+
+#toggle{
+    display: none;
+}
+
+#toggle:checked + .nav-small {
+    display: block;
+}
+
+
 /*   *********************  NAVIGATION  *********************   */
-.navigation{
+.nav{
     grid-area: nav;
     background-color: #1d1d1d;
     padding-left: 4%;
@@ -220,21 +258,21 @@ body{
 
 /* XtrsLarge and up */
 @media screen and (min-width: 101em) {
-    .navigation{
+    .nav{
         padding-left: 32.5%;
     }
 }
 
 /* Large only */
 @media screen and (min-width: 64em) and (max-width: 100em) {
-    .navigation{
+    .nav{
         padding-left: 27.5%;
     }
 }
 
 /* Medium only */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-    .navigation{
+    .nav{
         padding-left: 20%;
     }
 }
@@ -242,21 +280,22 @@ body{
 
 /* Small only */
 @media screen and (max-width: 39.9375em) {
-    .navigation{
+    .nav{
         display: none;
     }
 }
 
-.navigation a{
+.nav a{
     color: #eeeeee;
     text-transform: uppercase;
     line-height: 1.75;
 }
 
-.navigation ul{
+.nav ul{
     list-style: none;
     width: 20%;
 }
+
 /*   *********************  FOOTER  *********************   */
 .footer{
     grid-area: footer;
